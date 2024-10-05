@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Webb Captures the Iconic Horsehead Nebula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #c69c6d;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .fact {
+            background-color: #e9f5ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .quiz {
+            margin-top: 20px;
+            background-color: #e9f5ff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>NASA's Webb Captures the Iconic Horsehead Nebula</h1>
+        <img src="https://stsci-opo.org/STScI-01HV4BDR9C8MNJGJNS9TNE78YX.png" alt="Horsehead Nebula by Webb Telescope">
+        
+        <p>The James Webb Space Telescope has captured the top of the iconic Horsehead Nebula in unprecedented detail, showcasing the intricate structures within this famous cosmic feature.</p>
+        
+        <h2>Key Highlights</h2>
+        <div class="fact">
+            <p>The Horsehead Nebula, located in the constellation Orion, is a region of active star formation.</p>
+        </div>
+        <div class="fact">
+            <p>Webb's infrared capabilities reveal hidden details obscured by dust and gas in the nebula.</p>
+        </div>
+        <div class="fact">
+            <p>This observation provides crucial insights into the processes of star formation and the life cycle of stars.</p>
+        </div>
+
+        <div class="quiz">
+            <h2>Quiz Question</h2>
+            <p>What is the Horsehead Nebula primarily known for?</p>
+            <form id="quizForm">
+                <input type="radio" id="option1" name="mcq" value="A">
+                <label for="option1">A) Being a star cluster</label><br>
+                <input type="radio" id="option2" name="mcq" value="B">
+                <label for="option2">B) Active star formation region</label><br>
+                <input type="radio" id="option3" name="mcq" value="C">
+                <label for="option3">C) An asteroid belt</label><br>
+                <input type="radio" id="option4" name="mcq" value="D">
+                <label for="option4">D) A black hole</label><br>
+                <button type="button" onclick="checkAnswer()">Submit</button>
+            </form>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const options = document.getElementsByName('mcq');
+            let selectedOption;
+            for (const option of options) {
+                if (option.checked) {
+                    selectedOption = option.value;
+                    break;
+                }
+            }
+            const resultDiv = document.getElementById('result');
+            if (selectedOption === 'B') {
+                resultDiv.textContent = "Correct! The Horsehead Nebula is known as an active star formation region.";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Incorrect. The correct answer is B) Active star formation region.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
